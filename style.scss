@@ -1,0 +1,86 @@
+$color:antiquewhite;
+$bgk:#1e81b0;
+$box-1:#ff0000;
+$box-2:#40ff00;
+$box-3:#00ffbf;
+$box-4:#ff0080;
+$box-color:#000;
+
+/* body*/
+%body-color{
+background-color:$bgk;
+color: $color;
+font-family: Tahoma, Verdana, sans-serif;
+}
+/* boxs*/
+%boxs{
+    text-align: center;
+    padding: 10px;
+    border-radius:6px; 
+}
+
+%ulList{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 3vh;
+    background-color: #f1f1f1;
+    border-radius: 6px;
+}
+  %li-a{ 
+     margin:  30px;
+    color: #000;
+    text-decoration: none
+  }
+  %box-section{
+    display: flex;
+   align-items: center;
+  }
+ %box-div{
+    margin-top: 200px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+  } 
+  .box1{
+    background-color: $box-1;
+    @extend %boxs;
+    color: $box-color;
+    
+  }
+  .box2{
+    background-color: $box-2;
+    @extend %boxs;
+    color: $box-color;
+  }
+  .box3{
+    background-color: $box-3;
+    @extend %boxs;
+    color: $box-color;
+  }
+  .box4{
+    background-color: $box-4;
+    @extend %boxs;
+    color: $box-color;
+  }             
+body{
+@extend %body-color;
+}
+ul{
+    @extend %ulList;
+}
+li a{
+    @extend %li-a;
+}
+section{
+    @extend %box-section;
+    width: 100%;
+    height: 20vh;
+}
+div {
+    @extend %box-div;
+}
+
+
